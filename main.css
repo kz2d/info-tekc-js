@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  display: flex;
+}
+
+.table {
+  width: 50%;
+}
+#table {
+  min-height: 95vh;
+}
+
+.reduct {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  height: 400px;
+  justify-content: space-between;
+}
+textarea {
+  height: 80px;
+}
+
+.sortButton {
+  text-align: center;
+  height: 20px;
+  background-color: gray;
+  color: rgb(206, 205, 194);
+}

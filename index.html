@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV table</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="table">
+      <table id="table"></table>
+      <button id="minusButton">-</button>
+      <button id="plusButton">+</button>
+    </div>
+    <div class="reduct">
+      <form action="" id="form">
+        <input type="text" placeholder="firstName" /><input
+          type="text"
+          placeholder="lastName"
+        /><input type="text" placeholder="phone" />
+        <textarea placeholder="about"></textarea>
+        <input type="text" placeholder="eyeColor" />
+        <input type="submit" value="send" />
+      </form>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      window.onload = () => {
+        let table = document.getElementById("table");
+        let form = document.getElementById("form");
+        let plusButton = document.getElementById("plusButton");
+        let minusButton = document.getElementById("minusButton");
+        //Create an instance of class Table() etc. controller over table tag
+        let Controller = new Table(table, form, plusButton, minusButton);
+        //start a download of data.json
+        Controller.getData();
+      };
+    </script>
+  </body>
+</html>
